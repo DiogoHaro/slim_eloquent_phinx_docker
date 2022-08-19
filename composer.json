@@ -1,0 +1,18 @@
+{
+    "require": {
+        "slim/slim": "^4.10",
+        "slim/twig-view": "^3.3",
+        "slim/psr7": "^1.5",
+        "illuminate/database": "^9.24",
+        "robmorgan/phinx": "^0.12.12"
+    },
+    "autoload":{
+        "psr-4": {
+            "app\\":"app"
+        },
+        "files": [
+            "app/helpers/config.php",
+            "bootstrap.php"
+        ]
+    }
+}

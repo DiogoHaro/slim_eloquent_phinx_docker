@@ -1,0 +1,31 @@
+{% extends "site/master.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+
+<form action="/user/store" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" class="form-control">
+    {{messages['name']['message']|message(messages['name']['alert'])|raw}}
+    <br/>
+    <label for="age">Age:</label>
+    <input type="number" name="age" class="form-control">
+    {{messages['age']['message']|message(messages['age']['alert'])|raw}}
+    <br/>
+    <label for="email">Email:</label>
+    <input type="email" name="email" class="form-control">
+    {{messages['email']['message']|message(messages['email']['alert'])|raw}}
+    <br/>
+    <label for="password">Password:</label>
+    <input type="password" name="password" class="form-control">
+    {{messages['password']['message']|message(messages['password']['alert'])|raw}}
+    <br/>
+    <input type="hidden" name="_METHOD" value="POST"/>
+    <button type="submit" class="form-control btn btn-primary">Send</button>
+    <a href="/" class="form-control btn btn-primary">Back</a>
+</form>
+
+{{messages['message']['message']|message(messages['message']['alert'])|raw}}
+    
+{% endblock %}
