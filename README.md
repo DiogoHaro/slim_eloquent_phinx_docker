@@ -1,4 +1,4 @@
-# slim_eloquent_phinx_docker
+# Projeto criado com slim, eloquent, phinx e docker
 1- instalar docker, docker-compose.
 2- acesse a pasta raiz do projeto no terminal
 3- execute o comando docker-compose up -d para criar as images e os containers
